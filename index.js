@@ -1,19 +1,23 @@
 var assert = require("assert");
 
 //Ejercicio 1
-/*function Sumatoria (numinicial,numfinal)
+function Sumatoria (numinicial,numfinal)
 {
-  var valores = {
-  inicio : numinicial,
-  final: numfinal
-respuesta : function ()
-   {
+  this.numinicial = numinicial;
+  this.numfinal = numfinal;
 
-return (valores.final*(valores.final +1)/2);
-   }
+      this.respuesta  = function (){
+       return ((this.numfinal * (this.numfinal+1)/2)- (this.numinicial*(this.numinicial-1))/2);
+
 }
 }
-var opera = new Sumatoria(1,10);*/
+var opera = new Sumatoria(1,10);
+
+
+
+
+
+
 //Ejercicio 4
 
 function Ejercicio4(nombre,apellido,edad,genero,ciudad,pais)
@@ -56,13 +60,11 @@ function ChicasLaboratoria(nombre,edad, ocupacion, genero){
 
 
 //definiendo la prueba unitaria
-/*describe ("Ejercicio objeto II", function(){
-  describe("Ejercicio 1", function(){
-    it("Prueba sumados, 1,10",function(){
-    assert.equal(55,opera.sumita()) ;
+describe("Ejercicio 1", function(){
+  it("Prueba sumados del 1 al 10",function(){
+    assert.equal(55,opera.respuesta() );
     });
-  });*/
-
+  });
 
 
   describe("Ejercicio 4",function(){
